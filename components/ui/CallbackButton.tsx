@@ -163,7 +163,7 @@ export default function CallbackButton() {
                       Mobile Number
                     </label>
                     <div className="relative">
-                      <input {...register("type")} type="hidden" name="type" value='contact' />
+                      <input {...register("type")} type="hidden" name="type" value='callback' />
                    
                       <input
                         {...register("phone")}

@@ -183,6 +183,7 @@ export default function ContactPage() {
                           <label className="block text-xs font-medium text-slate-400 mb-1.5">
                             Full Name <span className="text-red-400">*</span>
                           </label>
+                          <input {...register("type")} type="hidden" name="type" value='contact' />
                           <input
                             {...register("name")}
                             placeholder="Rajesh Kumar"
