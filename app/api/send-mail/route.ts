@@ -3,8 +3,8 @@ import { callbackEmailTemplate } from "@/emails/CallbackEmail";
 import resend from "@/lib/resend";
 import { contactEmailTemplate } from "@/emails/ContactEmail";
 
-const mailTo:string = process.env.MAIL_TO || "";
-const mailFrom:string = process.env.MAIL_FROM || "";
+const mailTo:string = process.env.RESEND_MAIL_TO || "";
+const mailFrom:string = process.env.RESEND_FROM_EMAIL|| "";
 
 export async function POST(req: Request) {
   try {
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
     }
 
     console.log({
-      body, mailFrom, mailTo
+      body, mailFrom, mailTo, template
     })
 
     console.log(template)

@@ -13,6 +13,7 @@ import { BUSINESS_TYPES } from "@/types";
 import { cn } from "@/lib/utils";
 
 const contactSchema = z.object({
+  type: z.string().default("contact"),
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().regex(/^[6-9]\d{9}$/, "Enter a valid 10-digit Indian mobile number"),

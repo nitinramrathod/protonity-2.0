@@ -27,6 +27,7 @@ export interface Testimonial {
 
 export interface ContactFormData {
   name: string;
+  type: string;
   email: string;
   phone: string;
   businessType: string;
@@ -34,6 +35,7 @@ export interface ContactFormData {
 }
 
 export interface CallbackFormData {
+  type: string;
   phone: string;
   reason: string;
   name?: string;

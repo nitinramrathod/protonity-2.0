@@ -11,6 +11,7 @@ import { CALLBACK_REASONS } from "@/types";
 import { cn } from "@/lib/utils";
 
 const callbackSchema = z.object({
+  type: z.string().default("callback"),
   name: z.string().min(2, "Name is required"),
   phone: z.string().regex(/^[6-9]\d{9}$/, "Enter a valid 10-digit Indian mobile number"),
   reason: z.string().min(1, "Please select a reason"),
@@ -39,6 +40,7 @@ export default function CallbackButton() {
   });
 
   const onSubmit = (data: CallbackFormValues) => {
+    console.log("Submitting callback request:", data);
     mutation.mutate(data);
   };
 
@@ -161,9 +163,8 @@ export default function CallbackButton() {
                       Mobile Number
                     </label>
                     <div className="relative">
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-mono">
-                        +91
-                      </span>
+                      <input {...register("type")} type="hidden" name="type" value='contact' />
+                   
                       <input
                         {...register("phone")}
                         placeholder="98765 43210"

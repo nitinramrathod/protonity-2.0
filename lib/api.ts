@@ -22,14 +22,14 @@ api.interceptors.response.use(
 export const submitContactForm = async (
   data: ContactFormData
 ): Promise<ApiResponse> => {
-  const response = await api.post<ApiResponse>("/contact", data);
+  const response = await api.post<ApiResponse>("/send-mail", data);
   return response.data;
 };
 
 export const submitCallbackRequest = async (
   data: CallbackFormData
 ): Promise<ApiResponse> => {
-  const response = await api.post<ApiResponse>("/callback", data);
+  const response = await api.post<ApiResponse>("/send-mail", data);
   return response.data;
 };
 
