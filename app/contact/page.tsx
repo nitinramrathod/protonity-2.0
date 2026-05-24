@@ -24,8 +24,8 @@ const contactSchema = z.object({
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 const CONTACT_DETAILS = [
-  { Icon: Phone, label: "Phone", value: "+91 99999 99999", href: "tel:+919999999999" },
-  { Icon: Mail, label: "Email", value: "hello@protonity.in", href: "mailto:hello@protonity.in" },
+  { Icon: Phone, label: "Phone", value: "+91 8459556244", href: "tel:+918459556244" },
+  { Icon: Mail, label: "Email", value: "rathod173ram@gmail.com", href: "mailto:rathod173ram@gmail.com" },
   { Icon: MapPin, label: "Location", value: "Jalna, Maharashtra, India", href: null },
   { Icon: Clock, label: "Business Hours", value: "Mon–Sat, 9:00 AM – 7:00 PM IST", href: null },
 ];
@@ -160,7 +160,7 @@ export default function ContactPage() {
                     <div>
                       <p className="text-red-300 text-sm font-medium">Submission Failed</p>
                       <p className="text-red-400/70 text-xs mt-0.5">
-                        {mutation.error?.message || "Please try again or email us directly at hello@protonity.in"}
+                        {mutation.error?.message || "Please try again or email us directly at rathod173ram@gmail.com"}
                       </p>
                     </div>
                   </div>

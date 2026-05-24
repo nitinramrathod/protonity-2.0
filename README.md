@@ -146,7 +146,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 await resend.emails.send({
   from: 'website@protonity.in',
-  to: 'hello@protonity.in',
+  to: 'rathod173ram@gmail.com',
   subject: `New Enquiry from ${name}`,
   html: `<p>${message}</p>`,
 });

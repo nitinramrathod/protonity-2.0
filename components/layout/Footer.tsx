@@ -42,11 +42,11 @@ export default function Footer() {
             <div className="flex flex-col gap-2.5">
               <a href="tel:+919999999999" className="flex items-center gap-2 text-slate-400 hover:text-electric-400 transition-colors text-sm">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+91 99999 99999</span>
+                <span>+91 8459556244</span>
               </a>
-              <a href="mailto:hello@protonity.in" className="flex items-center gap-2 text-slate-400 hover:text-electric-400 transition-colors text-sm">
+              <a href="mailto:rathod173ram@gmail.com" className="flex items-center gap-2 text-slate-400 hover:text-electric-400 transition-colors text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>hello@protonity.in</span>
+                <span>rathod173ram@gmail.com</span>
               </a>
               <div className="flex items-center gap-2 text-slate-400 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0" />

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://protonity.in",
+    url: "https://protonity.vercel.app",
     siteName: "Protonity Technology",
     title: "Protonity Technology | Scalable Software Solutions",
     description:
