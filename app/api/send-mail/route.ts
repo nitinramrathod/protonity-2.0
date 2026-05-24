@@ -11,11 +11,14 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     let template;
+    let subject;
 
     if(body.type === "callback") {
       template = callbackEmailTemplate(body);
+      subject = "New Callback Request";
     } else if(body.type === "contact") {
       template = contactEmailTemplate(body);
+      subject = "New Contact Message";
     } else {
       return NextResponse.json(
         { error: "Invalid request type" },
@@ -23,16 +26,10 @@ export async function POST(req: Request) {
       );
     }
 
-    console.log({
-      body, mailFrom, mailTo, template
-    })
-
-    console.log(template)
-
     const { data, error } = await resend.emails.send({
       from: mailFrom,
       to: mailTo,
-      subject: "New Callback Request",
+      subject: subject,
       html: template,
     });
 
