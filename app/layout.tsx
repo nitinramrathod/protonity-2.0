@@ -40,6 +40,11 @@ export const metadata: Metadata = {
       },
     ],
   },
+  
+  verification: {
+    google: "Der7xo14fRB2aRy6gwK0mspdTD8NKTSSFkyAK65DYfU",
+  },
+
   twitter: {
     card: "summary_large_image",
     title: "Protonity Technology | Software Development",
